@@ -1,6 +1,9 @@
 import requests
+import datetime
 
-date='2021-01-03'
+#yesterday's date in the format YYYY-MM-DD
+date = (datetime.date.today() - datetime.timedelta(days=1)).strftime('%Y-%m-%d')
+
 
 def find_atd(data):
     for player in data['data']:
